@@ -5,7 +5,7 @@ app.use(express.json())
 
 
 app.get('/', (req, res) => {
-  res.json({ test: 'Hello World!' })
+  res.json({ test: 'Hello World!' }) //   internally calls JSON.stringify() and sets Content-Type: application/json
 })
 
 app.post("/p1/:id", (req, res) => {
